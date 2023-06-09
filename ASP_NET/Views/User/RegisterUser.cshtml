@@ -1,0 +1,19 @@
+@model ASP_NET.Models.User.UserRegistrationModel
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Successful Registration</h1>
+</div>
+
+<p>
+    Dear <strong>@Model.RealName</strong>!
+</p>
+<p>
+    Welcome to our website. Use your credentials to sign in.
+</p>
+@if (ViewData["avatarFilename"] is not null)
+{
+    <img src="/avatars/@ViewData["avatarFilename"]" alt="ava"/>
+}
